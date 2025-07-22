@@ -1,6 +1,6 @@
 ---
 import Layout from '@layouts/Layout.astro';
-import 'styles.css';
+import './styles.css';
 
 /* Bento Video Grid Layout
   a responsive Bento layout, holding cells that can contain video,
@@ -10,10 +10,34 @@ import 'styles.css';
 ---
 
 <Layout>
-  <div id="grid">
-    <div class="cell">1</div>
-    <div class="cell">2</div>
-    <div class="cell">3</div>
+  <div class="mx-auto w-full max-w-[1328px] py-7 grid grid-cols-12 grid-flow-dense xl:auto-rows-fr gap-4">
+    <div class="rounded-xl bg-amber-100 p-2 text-center col-span-full flex flex-col justify-center md:col-span-6 xl:row-span-4 gap-2">
+      1
+    </div>
+    <div class="rounded-xl bg-amber-200 p-2 text-center col-span-full flex flex-col justify-center md:col-span-6 xl:row-span-4 gap-2">
+      2
+    </div>
+    <div class="rounded-xl bg-amber-300 p-2 text-center flex flex-col justify-center col-span-full md:col-span-6 xl:col-span-3 xl:row-span-4 gap-2">
+      3
+    </div>
+    <div class="rounded-xl bg-amber-400 p-2 text-center flex flex-col justify-center col-span-full md:col-span-6 xl:row-span-4 gap-2">
+      4
+    </div>
+    <div class="rounded-xl bg-amber-500 p-2 text-center flex flex-col justify-center col-span-full md:col-span-6 xl:col-span-3 md:row-span-2 gap-2">
+      5
+    </div>
+    <div class="rounded-xl bg-amber-600 p-2 text-center flex flex-col justify-center col-span-full md:col-span-6 xl:col-span-3 md:row-span-2 gap-2">
+      6
+    </div>
+    <div class="rounded-xl bg-amber-700 p-2 text-center flex flex-col justify-center col-span-full md:col-span-6 xl:col-span-4 md:row-span-4 gap-2">
+      7
+    </div>
+    <div class="rounded-xl bg-amber-800 p-2 text-center flex flex-col justify-center col-span-full md:col-span-6 xl:col-span-4 md:row-span-4 gap-2">
+      8
+    </div>
+    <div class="rounded-xl bg-amber-900 p-2 text-center flex flex-col justify-center col-span-full md:col-span-6 xl:col-span-4 md:row-span-4 gap-2">
+      9
+    </div>
   </div>
 </Layout>
 
