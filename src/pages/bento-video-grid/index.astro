@@ -1,6 +1,9 @@
 ---
 import Layout from '@layouts/Layout.astro';
 import './styles.css';
+import clip1 from '@assets/video/clip-1.mp4'
+import clip2 from '@assets/video/clip-2.mp4'
+import clip3 from '@assets/video/clip-3.mp4'
 
 /* Bento Video Grid Layout
   a responsive Bento layout, holding cells that can contain video,
@@ -11,11 +14,17 @@ import './styles.css';
 
 <Layout>
   <div class="mx-auto w-full max-w-[1328px] py-7 grid grid-cols-12 grid-flow-dense xl:auto-rows-fr gap-4">
-    <div class="rounded-xl bg-amber-100 p-2 text-center col-span-full flex flex-col justify-center md:col-span-6 xl:row-span-4 gap-2">
-      1
+    <div class="rounded-xl bg-amber-100 text-center col-span-full flex flex-col justify-center md:col-span-6 xl:row-span-4 gap-2 relative overflow-hidden">
+      <video class="absolute z-10 w-auto min-w-full min-h-full" src={clip1} loop muted></video>
+      <div class="p-2 h-[300px] w-full z-20 flex top-0">
+        1
+      </div>
     </div>
-    <div class="rounded-xl bg-amber-200 p-2 text-center col-span-full flex flex-col justify-center md:col-span-6 xl:row-span-4 gap-2">
-      2
+    <div class="rounded-xl bg-amber-200 text-center col-span-full flex flex-col justify-center md:col-span-6 xl:row-span-4 gap-2 relative overflow-hidden">
+      <video class="absolute z-10 w-auto min-w-full min-h-full" src={clip2} loop muted></video>
+      <div class="p-2 w-full z-20 flex top-0">
+        2
+      </div>
     </div>
     <div class="rounded-xl bg-amber-300 p-2 text-center flex flex-col justify-center col-span-full md:col-span-6 xl:col-span-3 xl:row-span-4 gap-2">
       3
@@ -23,8 +32,11 @@ import './styles.css';
     <div class="rounded-xl bg-amber-400 p-2 text-center flex flex-col justify-center col-span-full md:col-span-6 xl:row-span-4 gap-2">
       4
     </div>
-    <div class="rounded-xl bg-amber-500 p-2 text-center flex flex-col justify-center col-span-full md:col-span-6 xl:col-span-3 md:row-span-2 gap-2">
-      5
+    <div class="rounded-xl bg-amber-500 text-center flex flex-col justify-center col-span-full md:col-span-6 xl:col-span-3 md:row-span-2 gap-2 overflow-hidden relative">
+      <video class="absolute z-10 w-auto min-w-full min-h-full" src={clip3} loop muted></video>
+      <div class="p-2 h-[100px] w-full z-20 flex top-0">
+        5
+      </div>
     </div>
     <div class="rounded-xl bg-amber-600 p-2 text-center flex flex-col justify-center col-span-full md:col-span-6 xl:col-span-3 md:row-span-2 gap-2">
       6
