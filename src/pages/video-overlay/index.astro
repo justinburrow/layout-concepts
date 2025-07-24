@@ -1,5 +1,6 @@
 ---
 import Layout from '@layouts/Layout.astro';
+import test4 from '@assets/video/test4.avif';
 import './styles.css';
 
 /* Video Overlay
@@ -9,7 +10,12 @@ import './styles.css';
 ---
 
 <Layout>
-  <div>
-
+  <div id="container">
+    <div id="video">
+      <picture>
+        <source type="image/avif" srcset={test4.src} />
+        <img src="@assets/video/test4.webp" alt="test4 - avif animated image with webp fallback">
+      </picture>
+    </div>
   </div>
 </Layout>
